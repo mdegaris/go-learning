@@ -7,7 +7,7 @@ import (
 func GeneratePrimes(n int) []string {
 
 	ch := make(chan int)
-	go NextPrime(ch)
+	go nextPrime(ch)
 
 	primes := []string{}
 	for i := 0; i < n; i++ {
@@ -17,7 +17,7 @@ func GeneratePrimes(n int) []string {
 	return primes
 }
 
-func NextPrime(ch chan int) {
+func nextPrime(ch chan int) {
 	for i := 2; ; i++ {
 		isPrime := true
 		for j := 1; j < i; j++ {
