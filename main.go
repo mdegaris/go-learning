@@ -9,10 +9,13 @@ import (
 )
 
 func main() {
-	greeting.English()
-	greeting.French()
+	greeting.Greet(greeting.ENGLISH)
+	greeting.Greet(greeting.FRENCH)
+	greeting.Greet(greeting.SPANISH)
 
-	fmt.Println(primes.GeneratePrimes(10))
-	fmt.Println(factorial.Factorial(5))
+	p := 300
+	f := 7
+	fmt.Println("Primes list", p, primes.GeneratePrimes(p))
+	fmt.Println("Factorial of", f, factorial.Factorial(f))
 
 }
